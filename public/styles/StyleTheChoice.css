@@ -1,8 +1,17 @@
 h1 {
     color: rebeccapurple;
 }
-
-#song {
-    margin-left: auto;
-    margin-right: auto;
+section#song p {
+    font-size: 100px;
+    text-align: center;
+}
+#buttons {
+    margin-left: 25%;
+}
+button {
+    color: white;
+    background-color: dimgray;
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
 }
