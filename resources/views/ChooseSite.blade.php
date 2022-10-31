@@ -9,19 +9,17 @@
 </head>
 <body>
 <div>
-    <h1>TEST</h1>
-    <p>Below is a suggestion based on your choices on the previous page. Choose whether you like
-    the song or not. If you do not know the song, go listen to it now or press the "Don't know" button
+    <h1>Rate the songs</h1>
+    <p id="exText">Below is a suggestion based on your choices on the previous page. Choose whether you like
+        the song or not. If you do not know the song, go listen to it now or press the "Don't know" button
     </p>
     <section id="song">
         <p id="song">Song Title - Artist</p>
     </section>
     <section id="buttons">
-        <form>
-            <button id="btn" value="Like" name="like" >Like</button>
-            <button id="btn" value="Don't like" name="don't like" >Dislike</button>
-            <button id="btn" value="Don't know" name="don't know" >Don't know</button>
-        </form>
+        <button id="btn" value="Like" name="like">Like</button>
+        <button id="btn2" value="Don't like" name="don't like">Dislike</button>
+        <button id="btn3" value="Don't know" name="don't know">Don't know</button>
     </section>
 </div>
 </body>
