@@ -12,7 +12,7 @@ function addTrack() {
     let songList = document.getElementById("songList").options;
     let chosenSong = document.getElementById("listForm").value;
     console.log(chosenSong);
-
+    checkSong();
     console.log(songList.length);
     for (let i = 0; i < songList.length; i++) {
         console.log(songList[i].value);
@@ -29,7 +29,10 @@ function addTrack() {
 }
 
 function checkSong(){
-
+    $("#songPool").each(function (i){
+        var value = $(this).attr('value');
+        console.log(value);
+    });
 }
 
 // function addTrack() {
