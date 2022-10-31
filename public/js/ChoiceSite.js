@@ -9,6 +9,7 @@ b1.addEventListener("click", saveLike);
 b2.addEventListener("click",saveDislike);
 b3.addEventListener("click",nextSong);
 
+nextSong();
 function saveLike () {
     console.log(song.innerText + " liked")
     count++;

@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('styles/StyleTheTest.css') }}"/>
-
     <script defer src={{asset("js/TestSite.js")}}></script>
 
 </head>
@@ -34,7 +33,7 @@
     </ol>
 </div>
 
-<a href = "{{asset('/choose')}}"><button id="start" type="button" disabled>Start test</button>
+<a href = "{{asset('/choose')}}"><button id="start" type="button" disabled>Next</button>
 
 </body>
 
