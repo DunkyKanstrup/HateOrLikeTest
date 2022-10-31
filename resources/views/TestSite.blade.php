@@ -15,7 +15,8 @@
 
 <form>
     <div>
-        <label for="listForm">Input track</label><input list="songList" name="track" id="listForm"/>
+        <label for="listForm">Input track</label>
+        <input list="songList" name="track" id="listForm"/>
         <datalist id ="songList">
             <option value ="Caterpillars riding bullets"/>
             <option value = "Fever Dreams"/>
@@ -32,6 +33,8 @@
 
     </ol>
 </div>
+
+<a href = "{{asset('/choose')}}"><button id="start" type="button" disabled>Start test</button>
 
 </body>
 
