@@ -1,28 +1,35 @@
-const button = document.querySelector('opinion');
-const song = document.querySelector('p');
+const song = document.getElementById('song');
+const button = document.getElementById("btn")
 let count = 0;
 
-button.addEventListener('click', saveChoice);
+button.addEventListener("click", saveChoice)
 
 function saveChoice() {
-    while (count <= 10){
-        if (button.value === 'Like') {
-            //write to doc
-            console.log(song.innerText + "liked");
-            count++;
-            nextSong();
-        } else if (button.value === "Don't like"){
-            //write to doc
-            console.log(song.innerText + "disliked");
-            count++;
-            nextSong();
-        } else {
-            nextSong();
-        }
+    if (button.innerText === 'Like') {
+        console.log("Like")
+        //write to doc
+        console.log(song.innerText + "liked");
+        count++;
+        console.log(count);
+        nextSong();
+    } else if (button.innerText === "Dislike") {
+        //write to doc
+        console.log("Don't like")
+        console.log(song.innerText + "disliked");
+        count++;
+        console.log(count);
+        nextSong();
+    } else {
+
+        nextSong();
+        console.log(count);
+    }
+    if (count === 10) {
+        button.disabled = true;
     }
 }
 
 function nextSong() {
     //get from generated list of possible recommendation
-    song.textContent = "new song randomized from list"
+    song.innerText = "Test"
 }
