@@ -4,7 +4,7 @@
     <title>Recommendation Test</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ asset('styles/StyleTheTest.css') }}"/>
+    <link rel="stylesheet" href="//url.to/js/styles/StyleTheTest.css"/>
     <script defer src="//url.to/js/TestSite.js"></script>
 
 </head>
