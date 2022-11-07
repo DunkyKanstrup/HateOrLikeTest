@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//url.to/js/styles/StyleTheTest.css"/>
-    <script defer src="//url.to/js/TestSite.js"></script>
+    <link rel="stylesheet" href="styles/StyleTheTest.css"/>
+    <script defer src="js/TestSite.js"></script>
 
 </head>
 
