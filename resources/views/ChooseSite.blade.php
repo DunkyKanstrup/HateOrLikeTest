@@ -2,9 +2,9 @@
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="{{asset("js/ChoiceSite.js")}}" defer></script>
+    <script src="js/ChoiceSite.js" defer></script>
     <title>Results</title>
-    <link rel="stylesheet" href="{{ asset('styles/StyleTheChoice.css') }}"/>
+    <link rel="stylesheet" href="styles/StyleTheChoice.css"/>
 
 </head>
 <body>
