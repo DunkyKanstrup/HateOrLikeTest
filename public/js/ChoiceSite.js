@@ -3,6 +3,7 @@ const choices = ["Hello - Adele", "Pierre er min gud - Eibert","September - EWF"
 const b1 = document.getElementById("btn");
 const b2 = document.getElementById("btn2");
 const b3 = document.getElementById("btn3");
+const finish = document.getElementById("finish");
 let count = 0;
 let like = 0;
 let total = 10;
@@ -15,8 +16,9 @@ b3.addEventListener("click",nextSong);
 nextSong();
 function saveLike () {
     console.log(song.innerText + " liked")
-    count++;
     like++;
+    document.getElementById("result-text").innerHTML = like/total;
+    count++;
     console.log(count)
     endCheck();
 }
@@ -44,15 +46,17 @@ function calculateSuccess(){
 function endCheck(){
     if (count ===total){
         calculateSuccess();
-        b1.disabled = true;
-        b2.disabled = true;
-        b3.disabled = true;
+        b1.style.display = "none";
+        b2.style.display = "none";
+        b3.style.display = "none";
+        finish.style.visibility = "visible"
+
     } else {
         nextSong();
     }
 }
 
-document.getElementById("result-text").innerHTML = result;
+
 window.onbeforeunload = function (){
     alert('Please make sure you have submitted your choices by pressing Finish Test before leaving')
 }

@@ -15,6 +15,8 @@
         Please be aware that the selection of song recommendations is limited, and that skipping songs too many times
         will lead to previously skipped songs reappearing. We recommend that you go listen to the songs you do not know if you have
         the time.
+
+        You will be asked to rate 10 songs in total. When you have rated them all, please press Finish Test
     </p>
     <section id="song">
         <p id="song">Song Title - Artist</p>
@@ -26,10 +28,8 @@
     </section>
     <form id="result-form" method="post" action="{{route('result')}}">
         @csrf
-    <label> Result
     <textarea id="result-text" name="result"></textarea>
-    </label>
-        <button type="submit">Finish test</button>
+        <button id="finish" type="submit">Finish test</button>
     </form>
 </div>
 </body>

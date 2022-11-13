@@ -13,7 +13,7 @@ class ResultController extends Controller
         $result->model = 'Quadrant';
         $result->successrate = \request('result');
         $result->save();
-        return redirect('/');
+        return redirect('done');
     }
 
     function viewChoices(){
