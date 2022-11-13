@@ -4,6 +4,9 @@ const b1 = document.getElementById("btn");
 const b2 = document.getElementById("btn2");
 const b3 = document.getElementById("btn3");
 let count = 0;
+let like = 0;
+let total = 10;
+let result =0;
 
 b1.addEventListener("click", saveLike);
 b2.addEventListener("click",saveDislike);
@@ -13,6 +16,7 @@ nextSong();
 function saveLike () {
     console.log(song.innerText + " liked")
     count++;
+    like++;
     console.log(count)
     endCheck();
 }
@@ -33,16 +37,24 @@ function nextSong() {
     song.innerText = next;
 }
 
+function calculateSuccess(){
+    return result = like/total;
+}
+
 function endCheck(){
-    if (count ===10){
+    if (count ===total){
+        calculateSuccess();
         b1.disabled = true;
         b2.disabled = true;
         b3.disabled = true;
-        alert("You have completed the test! Thank you for your help!")
     } else {
         nextSong();
     }
 }
 
+document.getElementById("result-text").innerHTML = result;
+window.onbeforeunload = function (){
+    alert('Please make sure you have submitted your choices by pressing Finish Test before leaving')
+}
 
 

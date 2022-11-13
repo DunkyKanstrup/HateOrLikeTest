@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ResultController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,9 @@ Route::get('/', function () {
     return view('TestSite');
 });
 
-Route::get('choose', function() {
-    return view('ChooseSite');
-});
+Route::get('choose', [ResultController::class, 'viewChoices'])->name('result');
+
+Route::post('choose', [ResultController::class, 'store'])->name('storeChoice');
+
 
 
