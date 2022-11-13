@@ -7,7 +7,6 @@ const finish = document.getElementById("finish");
 let count = 0;
 let like = 0;
 let total = 10;
-let result =0;
 
 b1.addEventListener("click", saveLike);
 b2.addEventListener("click",saveDislike);
@@ -39,26 +38,21 @@ function nextSong() {
     song.innerText = next;
 }
 
-function calculateSuccess(){
-    return result = like/total;
-}
-
 function endCheck(){
-    if (count ===total){
-        calculateSuccess();
+    if (count === total){
         b1.style.display = "none";
         b2.style.display = "none";
         b3.style.display = "none";
         finish.style.visibility = "visible"
-
+        window.onbeforeunload = function (){
+            alert('Please make sure you have submitted your choices by pressing Finish Test before leaving')
+        }
     } else {
         nextSong();
     }
 }
 
 
-window.onbeforeunload = function (){
-    alert('Please make sure you have submitted your choices by pressing Finish Test before leaving')
-}
+
 
 
