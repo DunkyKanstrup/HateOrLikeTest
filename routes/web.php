@@ -1,6 +1,10 @@
 <?php
 
+
 use App\Http\Controllers\TestSiteController;
+
+use App\Http\Controllers\ResultController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +20,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TestSiteController::class, 'loadSongs']);
 
-Route::get('choose', function() {
-    return view('ChooseSite');
+Route::get('done',function (){
+    return view('Done');
 });
 
-Route::get('/load', [TestSiteController::class, 'getSongTitles']);
+Route::get('choose', [ResultController::class, 'viewChoices'])->name('result');
+
+Route::post('choose', [ResultController::class, 'store'])->name('storeChoice');
+
 
