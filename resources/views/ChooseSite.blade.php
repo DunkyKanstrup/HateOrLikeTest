@@ -22,7 +22,8 @@
         <p id="song">Song Title - Artist</p>
     </section>
     <section id="buttons">
-        <button id="btn" value="Like" name="like">Like</button>
+        <button id="btn" value="Like" name="like">Love</button>
+        <button id="okaybtn" value="Okay" name="okay">Like</button>
         <button id="btn2" value="Don't like" name="don't like">Dislike</button>
         <button id="btn3" value="Don't know" name="don't know">Skip song</button>
     </section>
