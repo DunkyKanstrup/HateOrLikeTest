@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TestSiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('TestSite');
-});
+Route::get('/', [TestSiteController::class, 'loadSongs']);
 
 Route::get('choose', function() {
     return view('ChooseSite');
 });
 
+Route::get('/load', [TestSiteController::class, 'getSongTitles']);
 

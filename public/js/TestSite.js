@@ -1,4 +1,8 @@
 
+alert("By proceeding to take this test you are allowing us to save the result from this test");
+
+
+
 addTrackEvent();
 document.querySelector("#start").disabled = true;
 let songPool = document.getElementById('songPool');
@@ -30,8 +34,21 @@ function addTrack() {
 function startTest(){
     if(songPool.getElementsByTagName("li").length === 10){
         document.querySelector("#start").disabled = false;
-        //document.querySelector(".add").disabled = true;
+        document.querySelector(".add").disabled = true;
     }
 }
 
+function getSongs() {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open('GET', )
+    var url, availableOption;
+    url = 'resources/song.json';
 
+    $.getJSON(url, function (data) {
+        //populate the cars datalist
+        $(data.songs).each(function () {
+            availableOption = "<option value=\"" + this.id + "\">" + this.name + "</option>";
+            $('#songPool').append(availableOption);
+        });
+    });
+}

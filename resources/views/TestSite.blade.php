@@ -18,11 +18,11 @@
         <label for="listForm">Input track</label>
         <input list="songList" name="track" id="listForm"/>
         <datalist id ="songList">
-            <option value ="Caterpillars riding bullets"/>
-            <option value = "Fever Dreams"/>
-            <option value = "Sham Pain"/>
-            <option value = "Check Your Spam"/>
+            @foreach($songs as $song)
+                <option>{{$song->name. " by ". $song ->artist}}</option>
+            @endforeach
         </datalist>
+
         <button class="add" type="button">Add</button>
     </div>
 </form>
